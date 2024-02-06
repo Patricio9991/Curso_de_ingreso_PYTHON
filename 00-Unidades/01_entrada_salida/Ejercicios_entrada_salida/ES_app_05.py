@@ -47,7 +47,7 @@ class App(customtkinter.CTk):
         self.txt_edad.delete(0,"end")
 
         alert("info",f"Usted se llama {nombre} y su edad es {edad} años")
-
+    
         pass
 
         
