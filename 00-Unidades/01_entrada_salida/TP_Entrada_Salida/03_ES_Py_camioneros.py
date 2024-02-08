@@ -4,9 +4,11 @@ from tkinter.messagebox import askyesno as question
 from tkinter.simpledialog import askstring as prompt
 import customtkinter
 
+import math #traigo la libreria math
+
 '''
-nombre:
-apellido:
+nombre: Patricio 
+apellido: Pucheta
 ---
 TP: ES_Camioneros
 ---
@@ -54,7 +56,7 @@ class App(customtkinter.CTk):
         peso_soportado_camion = 3500
 
         camiones_necesarios = toneladas / peso_soportado_camion
-        camiones_necesarios = int(camiones_necesarios)
+        camiones_necesarios = math.ceil(camiones_necesarios) #uso la libreria
         
         msg = f"Se necesitan {camiones_necesarios} camiones"
 
