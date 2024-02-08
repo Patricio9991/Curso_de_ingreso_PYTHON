@@ -52,7 +52,7 @@ class App(customtkinter.CTk):
             msg = "Ala-pivot o pivot"
 
         alert("UTN",msg)    
-        pass
+        
         pass
 
         
