@@ -5,8 +5,8 @@ from tkinter.simpledialog import askstring as prompt
 import customtkinter
 
 '''
-nombre:
-apellido:
+nombre: Patricio
+apellido: Pucheta
 ---
 Ejercicio: entrada_salida_07
 ---
@@ -54,6 +54,8 @@ class App(customtkinter.CTk):
 
         suma = int(numA)+int(numB)
 
+        
+
         alert("Suma", f"El resultado de la suma es: {suma}")
 
         pass
@@ -64,7 +66,7 @@ class App(customtkinter.CTk):
 
         resta = int(numA)-int(numB)
 
-        alert("Resa", f"El resultado de la resta es: {resta}")
+        alert("Resta", f"El resultado de la resta es: {resta}")
         pass
 
     def btn_multiplicar_on_click(self):
