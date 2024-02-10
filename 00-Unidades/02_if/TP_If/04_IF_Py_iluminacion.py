@@ -5,8 +5,8 @@ from tkinter.simpledialog import askstring as prompt
 import customtkinter
 
 '''
-nombre:
-apellido:
+nombre: Patricio    
+apellido: Pucheta
 ---
 TP: IF_Iluminacion
 ---
@@ -46,33 +46,35 @@ class App(customtkinter.CTk):
         cantidad = self.combobox_cantidad.get()
         cantidad_int = int(cantidad)
 
-        marca = self.combobox_marca.get() #"ArgentinaLuz", "FelipeLamparas","JeLuz",           "HazIluminacion","Osram"
+        marca = self.combobox_marca.get()
 
-       
+        descuento = 0
         descuento_adicional = 0.05
-
+#C.	D.	Si compra 3  lamparitas bajo consumo marca "ArgentinaLuz"  el descuento es del 15%, si es  “FelipeLamparas” se hace un descuento del 10 % y si es de otra marca un 5%.
         if cantidad_int >= 6:
             descuento = 0.50
-            
-        if cantidad_int == 5 and marca == "ArgentinaLuz":
-            descuento = 0.40    
-        elif cantidad_int == 5 and marca != "ArgentinaLuz":
-            descuento = 0.30
-            
+        elif cantidad_int == 5:
+            if marca == "ArgentinaLuz":
+                descuento = 0.40
+            else:
+                descuento = 0.30
+        elif cantidad_int == 4:
+            if marca == "ArgentinaLuz" or marca == "FelipeLamparas":
+                descuento = 0.25
+            else:
+                descuento = 0.20 
+        elif cantidad_int == 3:
+            if marca == "ArgentinaLuz":
+                descuento = 0.15
+            else: 
+                if marca == "FelipeLamparas":
+                    descuento = 0.10
+                else:
+                    print(marca)
+                    descuento = 0.05    
+        #else responde al if que le corresponde, por eso me pisba a el valor de descuento
+        print (descuento)        
 
-        if cantidad_int == 4 and (marca == "ArgentinaLuz" or marca == "FelipeLamparas"):
-            descuento = 0.25
-        elif cantidad_int == 4 and marca != "ArgentinaLuz" and marca != "FelipeLamparas": 
-            descuento = 0.20 
-
-        if cantidad_int == 3 and marca == "ArgentinaLuz":
-            descuento = 0.15
-        elif cantidad_int == 3 and marca == "FelipeLamparas":
-            descuento = 0.10
-        elif cantidad_int == 3 and marca !="ArgentinaLuz" and marca !="FelipeLamparas":
-            descuento = 0.05
-
-        print(descuento)
         importe_total = cantidad_int*800
         importe_descuento = importe_total - importe_total*descuento
 
@@ -84,7 +86,7 @@ class App(customtkinter.CTk):
             alert("",f"el importe final es {importe_descuento}")
         
 
-            
+
 
         
 
