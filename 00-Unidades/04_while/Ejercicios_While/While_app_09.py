@@ -40,6 +40,39 @@ class App(customtkinter.CTk):
                               columnspan=2, sticky="nsew")
 
     def btn_comenzar_ingreso_on_click(self):
+        maximo = 0
+        minimo = 0
+        iterador = 0
+        while True:
+            numero = prompt("","Ingrese un numero")
+
+            if numero == None:
+                break
+            
+            numero = int(numero)
+
+            if iterador == 0:
+                maximo = numero
+                minimo = numero
+            else:
+                if numero > maximo:
+                    maximo = numero
+
+                if numero < minimo:
+                    minimo = numero 
+            
+            iterador +=1
+
+            print (maximo, minimo)    
+
+        self.txt_maximo.insert(0,maximo)
+        self.txt_minimo.insert(0,minimo)
+
+        alert("utn","Proceso terminado")
+
+        self.txt_maximo.delete(0,"end")
+        self.txt_minimo.delete(0,"end")
+        
         pass
 
 

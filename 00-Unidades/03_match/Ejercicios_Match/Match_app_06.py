@@ -39,6 +39,7 @@ class App(customtkinter.CTk):
         
     
     def btn_informar_on_click(self):
+        
         pass
     
     

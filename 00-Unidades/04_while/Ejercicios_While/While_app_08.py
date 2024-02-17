@@ -36,6 +36,29 @@ class App(customtkinter.CTk):
 
 
     def btn_comenzar_ingreso_on_click(self):
+
+        acumulador_suma_positivos = 0
+        acumulador_multiplicacion_negativos = -1
+
+        while True:
+            numero = prompt("","Ingrese un numero")
+
+            if numero == None or numero == "0":
+                break
+
+            numero_int = int(numero)
+
+            if numero_int >= 0:
+                acumulador_suma_positivos += numero_int
+               
+            else:
+                numero_abs = abs(numero_int) #aca obtengo el valor absoluto del numero
+                acumulador_multiplicacion_negativos *= numero_abs #acumulo los negativos   
+               
+
+        self.txt_suma_acumulada.insert(0,acumulador_suma_positivos)
+        self.txt_producto.insert(0,acumulador_multiplicacion_negativos)    
+        
         pass
 
     

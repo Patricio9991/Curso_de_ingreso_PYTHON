@@ -49,8 +49,8 @@ class App(customtkinter.CTk):
         marca = self.combobox_marca.get()
 
         descuento = 0
-        descuento_adicional = 0.05
-#C.	D.	Si compra 3  lamparitas bajo consumo marca "ArgentinaLuz"  el descuento es del 15%, si es  “FelipeLamparas” se hace un descuento del 10 % y si es de otra marca un 5%.
+       
+
         if cantidad_int >= 6:
             descuento = 0.50
         elif cantidad_int == 5:
@@ -75,17 +75,22 @@ class App(customtkinter.CTk):
         #else responde al if que le corresponde, por eso me pisba a el valor de descuento
         print (descuento)        
 
-        importe_total = cantidad_int*800
-        importe_descuento = importe_total - importe_total*descuento
+        precio_lampara = 800
 
-        if importe_descuento > 4000:
-            importe_descuento_extra = importe_descuento - importe_descuento*descuento_adicional
+        importe_total = cantidad_int*precio_lampara
+        importe_final = importe_total - importe_total*descuento
 
-            alert("",f"el importe final es: {importe_descuento_extra}")
-        else:
-            alert("",f"el importe final es {importe_descuento}")
+        msg = f"el importe final es: {importe_final} "
+        if importe_final > 4000:
+            descuento_adicional = 0.05
+            importe_final = importe_final - importe_final*descuento_adicional
+            msg = f"el importe final es: {importe_final} con descuento adional"
+
+        alert("",msg)
+
         
 
+    #optimizar mensajes y ver de no repetir variables, reasignar el valor mejor
 
 
         

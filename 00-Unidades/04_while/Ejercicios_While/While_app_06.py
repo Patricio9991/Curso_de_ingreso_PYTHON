@@ -35,6 +35,31 @@ class App(customtkinter.CTk):
 
 
     def btn_comenzar_ingreso_on_click(self):
+        cantidad_numeros = 5
+        iterador = 0
+        suma_acumulada = 0 
+        promedio = 0
+
+
+        while iterador <cantidad_numeros:
+            #pido valores dentro del while
+            numero_ingresado = prompt("UTN", "Ingrese un numero")
+            numero_ingresado = int(numero_ingresado)
+
+            #acumulo la suma con los numeros ingresados
+            suma_acumulada += numero_ingresado
+
+            #itero
+            iterador +=1
+
+        promedio = suma_acumulada/cantidad_numeros
+
+        self.txt_suma_acumulada.insert(0,suma_acumulada)
+        self.txt_promedio.insert(0,promedio)
+
+        alert("UTN","Fin del proceso")
+
+
         pass
 
     

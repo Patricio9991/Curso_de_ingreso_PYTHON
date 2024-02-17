@@ -6,8 +6,8 @@ import customtkinter
 
 
 '''
-nombre:
-apellido:
+nombre: Patricio
+apellido: Pucheta
 ---
 Ejercicio: while_05
 ---
@@ -30,6 +30,17 @@ class App(customtkinter.CTk):
         
     
     def btn_validar_letra_on_click(self):
+        letra = prompt("UTN","Ingrese letra en mayuscula")
+        letra = letra.upper() #para asegurarme de que se ingrese en mayus.
+
+        print(letra)
+        while letra != "U" and letra != "T" and letra != "N":
+            msg = "Ingrese una letra valida"
+            alert("UTN",msg)
+            letra = prompt("UTN","Ingrese letra en mayuscula")
+            letra = letra.upper()
+            
+        alert("UTN","Letra correcta")    
         pass
             
     
