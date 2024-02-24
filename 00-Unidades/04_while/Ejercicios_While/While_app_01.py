@@ -30,11 +30,15 @@ class App(customtkinter.CTk):
     
     def btn_mostrar_iteracion_on_click(self):   
         contador_iteracion = 0
+    
 
         while contador_iteracion < 10:
             msg = f"El numero es {contador_iteracion+1}"
             alert("",msg)
             contador_iteracion += 1
+            
+
+    
 
         pass
     

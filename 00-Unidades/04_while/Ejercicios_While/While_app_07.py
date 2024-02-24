@@ -5,8 +5,8 @@ from tkinter.simpledialog import askstring as prompt
 import customtkinter
 
 '''
-nombre:
-apellido:
+nombre: Patricio
+apellido: Pucheta
 ---
 Ejercicio: while_07
 ---
@@ -42,7 +42,7 @@ class App(customtkinter.CTk):
 
         while True:
             numero = prompt("Numero","Ingrese un numero")
-
+            print(numero)
             if numero == None:
                 break
             

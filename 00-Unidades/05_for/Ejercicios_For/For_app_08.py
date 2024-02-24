@@ -26,6 +26,26 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
+
+        numero = prompt("UTN","Ingrese un numero")
+        numero = int(numero)
+
+        contador_primos = 0
+
+        for i in range(2,numero+1):
+            contador = 0
+            for j in range(2,i+1):
+                    if i % j == 0:
+                        contador += 1
+
+            if contador < 2:
+                contador_primos +=1
+                print(i)  
+
+        print(f"Se encontraron {contador_primos} numeros primos entre el valor dado")                   
+                
+            
+        
         pass
     
 if __name__ == "__main__":

@@ -28,6 +28,10 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
+
+        for i in range(0,5):
+            print(f"mensaje {i+1}")
+
         pass 
        
             

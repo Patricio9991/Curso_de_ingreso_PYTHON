@@ -3,6 +3,7 @@ from tkinter.messagebox import showinfo as alert
 from tkinter.messagebox import askyesno as question
 from tkinter.simpledialog import askstring as prompt
 import customtkinter
+import random
 
 '''
 nombre:
@@ -37,6 +38,40 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
+        numero_aleatorio = 6
+
+        for i in range(1,8):
+            numero_usuario = prompt("",f"Ingrese un numero, intento {i}")
+            numero_usuario = int(numero_usuario)
+                
+            if numero_aleatorio == numero_usuario and i == 1:
+                print("Usted es un psíquico")
+                break
+            else:
+                match i:
+                    case 2:
+                        if numero_aleatorio == numero_usuario:
+                            print("Excelente percepción")
+                            break
+                    case 3:
+                        if numero_aleatorio == numero_usuario:
+                            print("Esto es suerte")
+                            break
+                    case 4|5|6:
+                        if numero_aleatorio == numero_usuario:
+                            print("Excelente tecnica")
+                            break
+                    case 7:
+                        print("Perdiste, suerte para la próxima")
+                        
+                if i == 7 and numero_usuario != numero_aleatorio:
+                    if numero_usuario > numero_aleatorio:
+                        print(f"Se paso del numero secreto")
+                    else:
+                        print(f"Le falto para el numero secreto")
+
+            
+
         pass
                 
 

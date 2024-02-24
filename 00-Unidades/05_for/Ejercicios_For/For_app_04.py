@@ -26,6 +26,17 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
+
+        for i in range(0,10):
+            numero = prompt("UTN","Ingrese un numero")
+            if numero == "9":
+                print("Se ingreso un 9, sale del ciclo")
+                break
+            numero = int(numero)
+            print(numero)
+            
+
+        
         pass
         
     

@@ -5,8 +5,8 @@ from tkinter.simpledialog import askstring as prompt
 import customtkinter
 
 '''
-nombre:
-apellido:
+nombre: Patricio
+apellido: Pucheta
 ---
 TP: While_validaciones_rising_btl
 ---
@@ -93,11 +93,6 @@ class App(customtkinter.CTk):
         self.txt_edad.delete(0,"end")
         self.txt_tipo.delete(0,"end")
         self.txt_legajo.delete(0,"end")        
-
-
-
-
-
 
         pass
 

@@ -35,7 +35,7 @@ class App(customtkinter.CTk):
         
        
 
-        while numero >10:
+        while numero < 0 or numero >10:
             msg_error = "Fuera de rango, vuelva a ingresar"
             alert("",msg_error)
             numero = int(prompt("utn","ingrese un numero"))

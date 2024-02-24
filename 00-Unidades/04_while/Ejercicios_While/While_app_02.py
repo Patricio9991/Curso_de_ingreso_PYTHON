@@ -6,8 +6,8 @@ import customtkinter
 
 
 '''
-nombre:
-apellido:
+nombre: Patricio
+apellido: Pucheta
 ---
 Ejercicio: while_02
 ---
@@ -32,8 +32,12 @@ class App(customtkinter.CTk):
         contador_iteracion = 10
 
         while contador_iteracion > 0:
-            print(contador_iteracion)
-            contador_iteracion -=1
+            msg = f'El numero es {contador_iteracion}'
+            alert("",msg)
+            contador_iteracion -=1   
+
+         
+
         pass
     
     
